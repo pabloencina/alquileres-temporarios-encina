@@ -5,8 +5,8 @@ export const globalStyles = {
   // Contenedores
   container: {
     maxWidth: "1200px",
-    margin: "0 auto",
-    padding: `0 ${theme.spacing.md}`,
+    margin: "0px",
+    //padding: `0 ${theme.spacing.md}`,
   },
 
   // Flexbox utilities
@@ -133,8 +133,8 @@ export const muiStyles = {
   // Para usar con sx prop
   container: {
     maxWidth: "1200px",
-    margin: "0 auto",
-    padding: `0 ${theme.spacing.md}`,
+    margin: "0px",
+    //padding: `0 ${theme.spacing.md}`,
   },
 
   flexCenter: {

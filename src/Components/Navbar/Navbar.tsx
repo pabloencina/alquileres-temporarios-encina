@@ -21,38 +21,35 @@ export const Navbar = () => {
   };
 
   return (
-    <Box sx={{ position: "relative" }}>
-      <Box sx={NavbarStyles.container}>
-        <Box>
-          <Button>
-            <img style={NavbarStyles.logo} src={daytimeModeLogo} alt="logo" />
-          </Button>
-          <Box sx={{ marginLeft: spacing.sm }}>
-            <Typography sx={NavbarStyles.title}>{t("navbar.title")}</Typography>
-          </Box>
-        </Box>
-        <Box sx={NavbarStyles.containerButton}>
-          <Button>
-            <LanguageOutlinedIcon sx={NavbarStyles.menuIcon} />
-          </Button>
-        </Box>
-        <Box sx={NavbarStyles.containerButton}>
-          <Button>
-            <ToggleOffOutlinedIcon sx={NavbarStyles.menuIcon} />
-          </Button>
-        </Box>
-        <Box sx={NavbarStyles.containerButton}>
-          <Button sx={NavbarStyles.button} onClick={handleMenuClick}>
-            {isMenuOpen ? (
-              <CloseOutlinedIcon sx={NavbarStyles.closeIcon} />
-            ) : (
-              <MenuIcon sx={NavbarStyles.menuIcon} />
-            )}
-          </Button>
+    <Box sx={NavbarStyles.container}>
+      <Box>
+        <Button>
+          <img style={NavbarStyles.logo} src={daytimeModeLogo} alt="logo" />
+        </Button>
+        <Box sx={{ marginLeft: spacing.sm }}>
+          <Typography sx={NavbarStyles.title}>{t("navbar.title")}</Typography>
         </Box>
       </Box>
-
-      {isMenuOpen && <NavigationMenu />}
+      <Box sx={NavbarStyles.containerButton}>
+        <Button>
+          <LanguageOutlinedIcon sx={NavbarStyles.menuIcon} />
+        </Button>
+      </Box>
+      <Box sx={NavbarStyles.containerButton}>
+        <Button>
+          <ToggleOffOutlinedIcon sx={NavbarStyles.menuIcon} />
+        </Button>
+      </Box>
+      <Box sx={NavbarStyles.containerButton}>
+        <Button sx={NavbarStyles.button} onClick={handleMenuClick}>
+          {isMenuOpen ? (
+            <CloseOutlinedIcon sx={NavbarStyles.closeIcon} />
+          ) : (
+            <MenuIcon sx={NavbarStyles.menuIcon} />
+          )}
+        </Button>
+      </Box>
+      <NavigationMenu isOpen={isMenuOpen} />
     </Box>
   );
 };

@@ -2,12 +2,12 @@ import { colors, spacing, borderRadius, typography, fonts } from "../../styles";
 
 export const NavbarStyles = {
   container: {
+    position: "relative",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
     backgroundColor: colors.primaryDayTime,
     padding: spacing.xs,
-    //borderBottom: `1px solid ${colors.gray[200]}`,
   },
   containerButton: {
     display: "flex",

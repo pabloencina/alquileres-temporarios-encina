@@ -17,8 +17,14 @@ export const NavigationMenuStyles = {
     gap: 1,
     backgroundColor: colors.primaryDayTime,
     padding: spacing.md,
-    marginTop: spacing.md,
     alignItems: "flex-start",
+    transform: "translateY(-20px) scale(0.95)",
+    opacity: 0,
+    transition: "all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)",
+    "&.open": {
+      transform: "translateY(0) scale(1)",
+      opacity: 1,
+    },
   },
   title: {
     fontFamily: fonts.secondary,
