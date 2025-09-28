@@ -1,0 +1,16 @@
+{
+  "navbar": {
+    "title": "Temporary Rentals Encina",
+    "navigation": {
+      "home": "Home",
+      "departments": "Departments",
+      "studioLino": "Studio Lino",
+      "photosGallery": "Photos Gallery",
+      "apart": "Apart",
+      "edificio": "Edificio",
+      "amenities": "Amenities",
+      "cityVisits": "City Visits",
+      "whereToEat": "Where to Eat"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "navbar": {
+    "title": "Alquileres Temporarios Encina",
+    "navigation": {
+      "home": "Página principal",
+      "departments": "Departamentos",
+      "studioLino": "Estudio Lino",
+      "photosGallery": "Galeria de fotos",
+      "apart": "Apart",
+      "edificio": "Edificio",
+      "amenities": "Amenities",
+      "cityVisits": "Visitas en la ciudad",
+      "whereToEat": "Donde comer"
+    }
+  }
+}
