@@ -1,5 +1,13 @@
+import { Navbar } from "./Components/Navbar/Navbar";
+import { NavigationMenu } from "./Components/Navbar/NavigationMenu";
+
 function App() {
-  return <div>Hola Mundo</div>;
+  return (
+    <>
+      <Navbar />
+      <NavigationMenu />
+    </>
+  );
 }
 
 export default App;
