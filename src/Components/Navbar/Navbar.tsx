@@ -1,4 +1,12 @@
-import { Box, Button, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Typography,
+  Menu,
+  MenuItem,
+  ListItemIcon,
+  ListItemText,
+} from "@mui/material";
 import { NavbarStyles } from "./Navbar.Styles";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
@@ -11,13 +19,29 @@ import { useState } from "react";
 import { NavigationMenu } from "./NavigationMenu";
 
 export const Navbar = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [languageAnchorEl, setLanguageAnchorEl] = useState<null | HTMLElement>(
+    null
+  );
+  const languageMenuOpen = Boolean(languageAnchorEl);
 
   const handleMenuClick = () => {
-    //console.log("Menu clicked, current state:", isMenuOpen);
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleLanguageClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    setLanguageAnchorEl(event.currentTarget);
+  };
+
+  const handleLanguageClose = () => {
+    setLanguageAnchorEl(null);
+  };
+
+  const handleLanguageChange = (language: string) => {
+    i18n.changeLanguage(language);
+    handleLanguageClose();
   };
 
   return (
@@ -31,7 +55,14 @@ export const Navbar = () => {
         </Box>
       </Box>
       <Box sx={NavbarStyles.containerButton}>
-        <Button>
+        <Button
+          id="language-button"
+          aria-controls={languageMenuOpen ? "language-menu" : undefined}
+          aria-haspopup="true"
+          aria-expanded={languageMenuOpen ? "true" : undefined}
+          onClick={handleLanguageClick}
+          sx={NavbarStyles.button}
+        >
           <LanguageOutlinedIcon sx={NavbarStyles.menuIcon} />
         </Button>
       </Box>
@@ -50,6 +81,37 @@ export const Navbar = () => {
         </Button>
       </Box>
       <NavigationMenu isOpen={isMenuOpen} />
+
+      <Menu
+        id="language-menu"
+        anchorEl={languageAnchorEl}
+        open={languageMenuOpen}
+        onClose={handleLanguageClose}
+        MenuListProps={{
+          "aria-labelledby": "language-button",
+        }}
+        anchorOrigin={{
+          vertical: "bottom",
+          horizontal: "left",
+        }}
+        transformOrigin={{
+          vertical: "top",
+          horizontal: "left",
+        }}
+      >
+        <MenuItem onClick={() => handleLanguageChange("es")}>
+          <ListItemIcon>
+            <Typography sx={{ fontSize: "18px" }}>🇪🇸</Typography>
+          </ListItemIcon>
+          <ListItemText>Español</ListItemText>
+        </MenuItem>
+        <MenuItem onClick={() => handleLanguageChange("en")}>
+          <ListItemIcon>
+            <Typography sx={{ fontSize: "18px" }}>🇺🇸</Typography>
+          </ListItemIcon>
+          <ListItemText>English</ListItemText>
+        </MenuItem>
+      </Menu>
     </Box>
   );
 };

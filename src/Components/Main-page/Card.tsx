@@ -1,10 +1,12 @@
 import { Box, Button, Typography } from "@mui/material";
 import { CardStyles } from "./Card.Styles";
 import apartmentEstudioLinoImage from "../Assets/apart.jpeg";
-import { t } from "i18next";
+import { useTranslation } from "react-i18next";
 import { spacing, typography } from "../../styles/theme";
 
 export const Card = () => {
+  const { t } = useTranslation();
+
   return (
     <Box sx={CardStyles.container}>
       <Box sx={CardStyles.imageContainer}>
@@ -26,7 +28,7 @@ export const Card = () => {
           sx={CardStyles.description}
           style={{ fontWeight: typography.fontWeights.semibold }}
         >
-          Equipado hasta 3 personas
+          {t("mainPage.card.capacity")}
         </Typography>
         <Typography sx={CardStyles.description}>
           {t("mainPage.card.description")}

@@ -18,7 +18,25 @@
     "card": {
       "title": "Apart Estudio Lino",
       "description": "Un espacio moderno, funcional y con estilo, pensado para que te sientas como en casa.",
-      "button": "Ver más detalles"
+      "button": "Ver más detalles",
+      "capacity": "Equipado hasta 3 personas"
+    }
+  },
+  "reservations": {
+    "title": "Reservá tu estadía",
+    "description": "Contactate con nosotros y te asesoramos: Disponibilidad, Precios, Check-in y Check-out y todo lo que necesites saber para que tus días en Córdoba sean perfectos.",
+    "button": "Contactar"
+  },
+  "information": {
+    "schedule": {
+      "title": "Horarios de atención",
+      "weekdays": "Lunes a viernes: 8:00 a 19:00 hs",
+      "saturday": "Sábados: 9:00 a 13:00 hs"
+    },
+    "contact": {
+      "title": "Contactanos",
+      "phone": "299-4231917",
+      "email": "alquileres.encina@gmail.com"
     }
   }
 }
