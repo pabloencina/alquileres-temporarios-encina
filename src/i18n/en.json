@@ -12,5 +12,13 @@
       "cityVisits": "City Visits",
       "whereToEat": "Where to Eat"
     }
+  },
+  "mainPage": {
+    "title": "Temporary Rental in Córdoba, Argentina",
+    "card": {
+      "title": "Apart Estudio Lino",
+      "description": "A modern, functional and stylish space, designed to make you feel at home.",
+      "button": "View details"
+    }
   }
 }

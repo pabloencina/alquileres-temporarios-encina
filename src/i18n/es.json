@@ -12,5 +12,13 @@
       "cityVisits": "Visitas en la ciudad",
       "whereToEat": "Donde comer"
     }
+  },
+  "mainPage": {
+    "title": "Alquiler Temporario en Córdoba, Argentina",
+    "card": {
+      "title": "Apart Estudio Lino",
+      "description": "Un espacio moderno, funcional y con estilo, pensado para que te sientas como en casa.",
+      "button": "Ver más detalles"
+    }
   }
 }
