@@ -38,5 +38,35 @@
       "phone": "299-4231917",
       "email": "alquileres.encina@gmail.com"
     }
+  },
+  "apartPage": {
+    "title1": "MODERN, FUNCTIONAL AND STYLISH SPACE",
+    "description": "This space combines bedroom, living room and kitchen in a loft design, comfortable and well-lit. The matrimonial bed is located in front of an elegant wall with warm lighting, providing a cozy environment. The dining area for two people is practical and integrated into the fully equipped kitchen with microwave, electric stove, anafe and complete kitchenware. Additionally, the decorative details and urban art in the kitchen add a distinctive and modern touch. Ideal for short or long stays, with everything you need to feel at home.",
+    "title2": "A THOUGHTFUL SPACE TO FEEL LIKE HOME",
+    "description2": "Each corner of this space was created with dedication to provide you with a cozy and comfortable experience. The details make the difference: upon arrival you will find bottles of filtered water, infusions, cookies, and a card with recommendations for tourist sites, places to eat and local tips, all prepared especially for you. The bed dressed with soft textiles, warm lighting and decorated with plants and books invites you to rest and feel comfortable from the first moment. An ideal place to relax and enjoy the city with all the comforts at your fingertips.",
+    "title3": "BATHROOM MODERN, LARGE AND TOTALLY EQUIPPED",
+    "description3": "This bathroom combines comfort and style. It has a large mirror, excellent LED lighting. Includes toilet, bidet, towels, toilet paper and waste basket. Everything in a clean, elegant and perfectly functional environment for a comfortable stay."
+  },
+  "buildingPage": {
+    "title1": "A COLORFUL ICON IN THE CENTER OF CÓRDOBA",
+    "description": "Located on Corrientes 207, this building is a explosion of color and creativity in the heart of Córdoba Capital. Its vibrant facade, filled with geometric shapes and abstract characters, turns a urban walk into an artistic experience. An unmissable stop to take photos, let yourself be surprised and enjoy the contemporary art that dialogues with the city.",
+    "title2": "WELCOME TO VILAUT: COMFORT AND DESIGN",
+    "description2": "The access to the Vilaut building presents with a contemporary and elegant style. The modern typography of the sign, the clean facade lines and the glass entrance give a first impression of comfort, careful design and urban style. A wide and luminous lobby anticipates an experience thought for those who value the harmony between functionality and aesthetics.",
+    "title3": "VILAUT RECEPTION: COMFORT, ART AND SECURITY 24 HOURS",
+    "description3": "A space thought for your arrival to be as comfortable as your stay. The reception of the Vilaut building, in the center of Córdoba, combines a modern style with unique artistic details that create a warm and welcoming atmosphere from the first moment.<br /><br /><strong>Are you arriving before the check-in time?</strong><br />Don't worry, you can leave your luggage at reception and walk around the city with total freedom.<br /><br /><strong>Security 24 hours.</strong><br />We have permanent security to give you peace of mind during your stay."
+  },
+  "amenitiesPage": {
+    "pool": {
+      "title": "MODERN, FUNCTIONAL AND STYLISH SPACE",
+      "description": "This space combines bedroom, living room and kitchen in a loft design, comfortable and well-lit. The matrimonial bed is located in front of an elegant wall with warm lighting, providing a cozy environment. The dining area for two people is practical and integrated into the fully equipped kitchen with microwave, electric stove, anafe and complete kitchenware. Additionally, the decorative details and urban art in the kitchen add a distinctive and modern touch. Ideal for short or long stays, with everything you need to feel at home."
+    },
+    "gym": {
+      "title": "GIMNASIO AMPLIO Y LUMINOSO",
+      "description": "If you like to stay active, the gym of the building will love you. It has natural light thanks to the large central skylight, functional training equipment, bicycles and machines for different routines. Spacious, ventilated and with an excellent atmosphere to train."
+    },
+    "coworking": {
+      "title": "ESPACIO COWORKING CÓMODO Y FUNCIONAL",
+      "description": "A quiet environment, ideal for working or studying without interruptions. Warm lighting that promotes concentration and reduces visual fatigue.<br /><br />Fast and stable Wi-Fi connection, perfect for video calls, downloads or intensive study sessions.<br /><br />You can take mates, coffee or enjoy something to eat while working, in addition, you have individual lockers with a key to safely store your belongings during your stay."
+    }
   }
 }

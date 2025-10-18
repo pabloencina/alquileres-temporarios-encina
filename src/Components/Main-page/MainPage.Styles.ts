@@ -4,9 +4,9 @@ export const MainPageStyles = {
   container: {
     position: "relative",
     width: "100%",
-    height: "50vh",
+    height: "70vh",
     display: "flex",
-    alignItems: "center",
+    alignItems: "flex-start",
     justifyContent: "flex-start",
     overflowY: "scroll",
   },
@@ -23,7 +23,7 @@ export const MainPageStyles = {
 
   title: {
     fontFamily: fonts.primary,
-    padding: spacing.md,
+    padding: "4rem",
     fontSize: typography.fontSizes.xl,
     position: "absolute" as const,
     zIndex: 2,

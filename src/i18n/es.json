@@ -7,7 +7,7 @@
       "studioLino": "Estudio Lino",
       "photosGallery": "Galeria de fotos",
       "apart": "Apart",
-      "edificio": "Edificio",
+      "building": "Edificio",
       "amenities": "Amenities",
       "cityVisits": "Visitas en la ciudad",
       "whereToEat": "Donde comer"
@@ -37,6 +37,36 @@
       "title": "Contactanos",
       "phone": "299-4231917",
       "email": "alquileres.encina@gmail.com"
+    }
+  },
+  "apartPage": {
+    "title1": "ESPACIO MODERNO, FUNCIONAL Y CON ESTILO",
+    "description": "Este ambiente combina dormitorio, comedor y cocina en un diseño tipo loft, cómodo y bien iluminado. <br /><br />La cama matrimonial se ubica frente a una elegante pared con iluminación cálida, brindando un entorno acogedor. El comedor para dos personas es práctico y está integrado a la cocina totalmente equipada con microondas, pava electrica, anafe y vajilla completa. Además los detalles decorativos y el arte urbano en la cocina aportan un toque distintivo y moderno. <br /><br />Ideal para estadías breves o largas, con todo lo necesario para sentirte como en casa.",
+    "title2": "UN ESPACIO PENSADO PARA QUE TE SENTAS COMO EN CASA",
+    "description2": "Cada rincón de este ambiente fue creado con dedicación para brindarte una experiencia acogedora y confortable. <br /><br />Los detalles hacen la diferencia: al llegar encontrarás sobre la mesa botellas de agua filtrada, infusiones, galletitas, y una cartilla con recomendaciones de sitios turísticos, lugares para comer y tips locales, todo preparado especialmente para vos. <br /><br />La cama vestida con textiles suaves, la iluminación cálida y los rincones decorados con plantas y libros invitan al descanso y a sentirse a gusto desde el primer momento. Un lugar ideal para relajarse y disfrutar de la ciudad con todas las comodidades al alcance.",
+    "title3": "BAÑO MODERNO, AMPLIO Y TOTALMENTE EQUIPADO",
+    "description3": "Este baño combina comodidad y estilo. Cuenta con amplio espejo, excelente iluminación LED. Incluye inodoro, bidet, toallas, papel higiénico y cesto de residuos. Todo en un ambiente limpio, elegante y perfectamente funcional para una estadía confortable."
+  },
+  "buildingPage": {
+    "title1": "UN ÍCONO DE COLOR EN PLENO CENTRO DE CÓRDOBA",
+    "description": "Ubicado en Corrientes 207, este edificio es una explosión de color y creatividad en el corazón de Córdoba Capital. Su fachada vibrante, llena de formas geométricas y personajes abstractos, convierte un paseo urbano en una experiencia artística. <br /><br />Una parada imperdible para sacar fotos, dejarse sorprender y disfrutar del arte contemporáneo que dialoga con la ciudad.",
+    "title2": "BIENVENIDO A VILAUT: CONFORT Y DISEÑO",
+    "description2": "El acceso al edificio Vilaut, se presenta con una estética contemporánea y elegante. <br /><br />La tipografía moderna del cartel, la fachada de líneas limpias y el ingreso vidriado dan una primera impresión de comodidad, diseño cuidado y estilo urbano. <br /><br />Un hall amplio y luminoso anticipa una experiencia pensada para quienes valoran la armonía entre lo funcional y lo estético.",
+    "title3": "RECEPCIÓN VILAUT: COMODIDAD, ARTE Y SEGURIDAD LAS 24 HS",
+    "description3": "Un espacio pensado para que tu llegada sea tan cómoda como tu estadía. La recepción del edificio Vilaut, en pleno centro de Córdoba, combina un estilo moderno con detalles artísticos únicos que crean una atmósfera cálida y acogedora desde el primer instante.<br /><br /><strong>¿Llegás antes del horario de check-in?</strong> <br />No te preocupes, podés dejar tu equipaje en recepción y recorrer la ciudad con total libertad. <br /><br /><strong>Seguridad las 24 hs.</strong> <br />Contamos con vigilancia permanente para brindarte tranquilidad durante toda tu estadía."
+  },
+  "amenitiesPage": {
+    "pool": {
+      "title": "PISCINA CON VISTA PANORÁMICA EN EL CORAZÓN DE CÓRDOBA",
+      "description": "¿Buscás un lugar para relajarte después de un día de recorridas o trabajo? En el edificio Vilaut te espera una espectacular piscina en la terraza, rodeada de una increíble vista urbana de Córdoba capital.<br /><br />Ideal para disfrutar del sol, refrescarte o simplemente desconectar mientras admirás la ciudad desde las alturas.<br /><br />Espacios amplios, tranquilos y bien cuidados, perfectos tanto para un momento de relax como para sacar fotos increíbles"
+    },
+    "gym": {
+      "title": "GIMNASIO AMPLIO Y LUMINOSO",
+      "description": "Si te gusta mantenerte activo, el gimnasio del edificio te va a encantar. Cuenta con luz natural gracias al gran tragaluz central, equipos de entrenamiento funcional, bicicletas y máquinas para diferentes rutinas. Espacioso, ventilado y con una excelente atmósfera para entrenar."
+    },
+    "coworking": {
+      "title": "ESPACIO COWORKING CÓMODO Y FUNCIONAL",
+      "description": "Un ambiente tranquilo, ideal para trabajar o estudiar sin interrupciones. Iluminación cálida que favorece la concentración y reduce el cansancio visual.<br /><br />Conexión Wi-Fi rápida y estable, perfecta para videollamadas, descargas o sesiones de estudio intensas.<br /><br />Podés tomar mates, café o disfrutar de algo para comer mientras trabajás, además, contás con lockers individuales con llave para guardar tus pertenencias de forma segura durante tu estadía."
     }
   }
 }

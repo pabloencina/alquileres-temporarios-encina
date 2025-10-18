@@ -44,10 +44,14 @@ export const Navbar = () => {
     handleLanguageClose();
   };
 
+  const handleLogoClick = () => {
+    window.location.href = "/";
+  };
+
   return (
     <Box sx={NavbarStyles.container}>
       <Box>
-        <Button>
+        <Button onClick={handleLogoClick}>
           <img style={NavbarStyles.logo} src={daytimeModeLogo} alt="logo" />
         </Button>
         <Box sx={{ marginLeft: spacing.sm }}>

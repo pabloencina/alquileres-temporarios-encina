@@ -10,7 +10,7 @@ export const ReservationsStyles = {
   container: {
     width: "100%",
     height: "100%",
-    backgroundColor: colors.primaryDayTime,
+    //backgroundColor: colors.primaryDayTime,
     padding: spacing.md,
     display: "flex",
     flexDirection: "column",
@@ -35,8 +35,8 @@ export const ReservationsStyles = {
 
   description: {
     fontFamily: fonts.accent,
-    fontSize: typography.fontSizes.xs,
-    fontWeight: typography.fontWeights.medium,
+    fontSize: typography.fontSizes.sm,
+    fontWeight: typography.fontWeights.normal,
     color: colors.text.secondary,
   },
 
@@ -60,7 +60,7 @@ export const ReservationsStyles = {
 
   button: {
     fontFamily: fonts.accent,
-    fontSize: typography.fontSizes.xs,
+    fontSize: typography.fontSizes.sm,
     paddingX: spacing.xl,
     paddingY: spacing.sm,
     borderRadius: borderRadius.sm,

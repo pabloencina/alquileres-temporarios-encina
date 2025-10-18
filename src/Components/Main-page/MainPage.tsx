@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material";
-import mainPageImage from "../Assets/image-main-page.jpeg";
+import mainPageImage from "../Assets/image-main-page.png";
 import { MainPageStyles } from "./MainPage.Styles";
 import { Card } from "./Card";
 import { spacing } from "../../styles/theme";

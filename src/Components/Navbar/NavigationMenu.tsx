@@ -127,11 +127,11 @@ export const NavigationMenu = ({ isOpen }: NavigationMenuProps) => {
             </Typography>
           </Link>
           <Link
-            href="/edificio"
+            href="/building"
             sx={{ textDecoration: "none", color: "inherit" }}
           >
             <Typography sx={NavigationMenuStyles.title}>
-              {t("navbar.navigation.edificio")}
+              {t("navbar.navigation.building")}
             </Typography>
           </Link>
           <Link

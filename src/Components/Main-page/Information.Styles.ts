@@ -4,7 +4,7 @@ export const InformationStyles = {
   container: {
     width: "100%",
     height: "100%",
-    backgroundColor: colors.primaryDayTime,
+    //backgroundColor: colors.primaryDayTime,
     padding: spacing.md,
     display: "flex",
     flexDirection: "column",
@@ -20,8 +20,8 @@ export const InformationStyles = {
   },
   description: {
     fontFamily: fonts.accent,
-    fontSize: typography.fontSizes.xs,
-    fontWeight: typography.fontWeights.medium,
+    fontSize: typography.fontSizes.sm,
+    fontWeight: typography.fontWeights.normal,
     color: colors.text.secondary,
     paddingX: spacing.md,
     alignItems: "center",
