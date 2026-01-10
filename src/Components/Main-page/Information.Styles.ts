@@ -25,6 +25,7 @@ export const InformationStyles = {
     color: colors.text.secondary,
     paddingX: spacing.md,
     alignItems: "center",
+    textAlign: "center",
   },
 
   phoneIcon: {

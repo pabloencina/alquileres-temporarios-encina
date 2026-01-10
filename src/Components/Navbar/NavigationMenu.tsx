@@ -1,5 +1,7 @@
-import { Box, Button, Link, Typography } from "@mui/material";
+import { Box, Button, Typography, Link } from "@mui/material";
 import { useState, useEffect } from "react";
+import { Link as RouterLink } from "react-router-dom";
+import { useTheme } from "../../contexts/ThemeContext";
 
 import { NavigationMenuStyles } from "./NavigationMenu.Styles";
 import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDownOutlined";
@@ -11,11 +13,20 @@ interface NavigationMenuProps {
 }
 
 export const NavigationMenu = ({ isOpen }: NavigationMenuProps) => {
+  const { isDarkMode } = useTheme();
   const [departmentsOpen, setDepartmentsOpen] = useState(false);
   const [studioLinoOpen, setStudioLinoOpen] = useState(false);
   const [photoGalleryOpen, setPhotoGalleryOpen] = useState(false);
   const [shouldRender, setShouldRender] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
+
+  // Obtener colores dinámicos según el tema
+  const getDynamicStyles = () => ({
+    backgroundColor: isDarkMode ? "#447D9B" : "#FAEDCA", // primaryNightTime / primaryDayTime
+    textColor: isDarkMode ? "#F6F6F6" : "#273F47", // buttons.secondary / text.secondary
+  });
+
+  const dynamicStyles = getDynamicStyles();
 
   useEffect(() => {
     if (isOpen) {
@@ -50,14 +61,15 @@ export const NavigationMenu = ({ isOpen }: NavigationMenuProps) => {
     <Box
       sx={{
         ...NavigationMenuStyles.container,
+        backgroundColor: dynamicStyles.backgroundColor,
         ...(isAnimating && {
           "&.open": NavigationMenuStyles.container["&.open"],
         }),
       }}
       className={isAnimating ? "open" : ""}
     >
-      <Link href="/" sx={{ textDecoration: "none", color: "inherit" }}>
-        <Typography sx={NavigationMenuStyles.title}>
+      <Link component={RouterLink} to="/" sx={{ textDecoration: "none", color: "inherit" }}>
+        <Typography sx={{ ...NavigationMenuStyles.title, color: dynamicStyles.textColor }}>
           {t("navbar.navigation.home")}
         </Typography>
       </Link>
@@ -67,7 +79,7 @@ export const NavigationMenu = ({ isOpen }: NavigationMenuProps) => {
         onClick={handleDepartmentsClick}
         sx={NavigationMenuStyles.button}
       >
-        <Typography sx={NavigationMenuStyles.title}>
+        <Typography sx={{ ...NavigationMenuStyles.title, color: dynamicStyles.textColor }}>
           {t("navbar.navigation.departments")}
         </Typography>
         {departmentsOpen ? (
@@ -84,7 +96,7 @@ export const NavigationMenu = ({ isOpen }: NavigationMenuProps) => {
             onClick={handleStudioLinoClick}
             sx={NavigationMenuStyles.button}
           >
-            <Typography sx={NavigationMenuStyles.title}>
+            <Typography sx={{ ...NavigationMenuStyles.title, color: dynamicStyles.textColor }}>
               {t("navbar.navigation.studioLino")}
             </Typography>
             {studioLinoOpen ? (
@@ -105,7 +117,7 @@ export const NavigationMenu = ({ isOpen }: NavigationMenuProps) => {
             onClick={handlePhotoGalleryClick}
             sx={NavigationMenuStyles.button}
           >
-            <Typography sx={NavigationMenuStyles.title}>
+            <Typography sx={{ ...NavigationMenuStyles.title, color: dynamicStyles.textColor }}>
               {t("navbar.navigation.photosGallery")}
             </Typography>
             {photoGalleryOpen ? (
@@ -121,39 +133,41 @@ export const NavigationMenu = ({ isOpen }: NavigationMenuProps) => {
 
       {photoGalleryOpen && (
         <Box sx={{ ...NavigationMenuStyles.box, marginLeft: 3, gap: 1 }}>
-          <Link href="/apart" sx={{ textDecoration: "none", color: "inherit" }}>
-            <Typography sx={NavigationMenuStyles.title}>
+          <Link component={RouterLink} to="/apart" sx={{ textDecoration: "none", color: "inherit" }}>
+            <Typography sx={{ ...NavigationMenuStyles.title, color: dynamicStyles.textColor }}>
               {t("navbar.navigation.apart")}
             </Typography>
           </Link>
           <Link
-            href="/building"
+            component={RouterLink}
+            to="/building"
             sx={{ textDecoration: "none", color: "inherit" }}
           >
-            <Typography sx={NavigationMenuStyles.title}>
+            <Typography sx={{ ...NavigationMenuStyles.title, color: dynamicStyles.textColor }}>
               {t("navbar.navigation.building")}
             </Typography>
           </Link>
           <Link
-            href="/amenities"
+            component={RouterLink}
+            to="/amenities"
             sx={{ textDecoration: "none", color: "inherit" }}
           >
-            <Typography sx={NavigationMenuStyles.title}>
+            <Typography sx={{ ...NavigationMenuStyles.title, color: dynamicStyles.textColor }}>
               {t("navbar.navigation.amenities")}
             </Typography>
           </Link>
         </Box>
       )}
 
-      <Link href="/" sx={{ textDecoration: "none", color: "inherit" }}>
-        <Typography sx={NavigationMenuStyles.title}>
+      <Link component={RouterLink} to="/city-visits" sx={{ textDecoration: "none", color: "inherit" }}>
+        <Typography sx={{ ...NavigationMenuStyles.title, color: dynamicStyles.textColor }}>
           {" "}
           {t("navbar.navigation.cityVisits")}
         </Typography>
       </Link>
 
-      <Link href="/" sx={{ textDecoration: "none", color: "inherit" }}>
-        <Typography sx={NavigationMenuStyles.title}>
+      <Link component={RouterLink} to="/where-to-eat" sx={{ textDecoration: "none", color: "inherit" }}>
+        <Typography sx={{ ...NavigationMenuStyles.title, color: dynamicStyles.textColor }}>
           {t("navbar.navigation.whereToEat")}
         </Typography>
       </Link>

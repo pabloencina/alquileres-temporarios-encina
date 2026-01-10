@@ -36,6 +36,8 @@ export const Information = () => {
             flexDirection: "row",
             paddingX: spacing.md,
             alignItems: "center",
+            justifyContent: "center",
+            textAlign: "center",
           }}
         >
           <img
@@ -53,6 +55,8 @@ export const Information = () => {
             flexDirection: "row",
             paddingX: spacing.md,
             alignItems: "center",
+            justifyContent: "center",
+            textAlign: "center",
           }}
         >
           <MarkEmailUnreadOutlinedIcon style={InformationStyles.emailIcon} />

@@ -29,6 +29,8 @@ export const ReservationsStyles = {
   descriptionContainer: {
     display: "flex",
     flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
     gap: spacing.sm,
     paddingX: spacing.md,
   },
@@ -38,6 +40,7 @@ export const ReservationsStyles = {
     fontSize: typography.fontSizes.sm,
     fontWeight: typography.fontWeights.normal,
     color: colors.text.secondary,
+    textAlign: "center",
   },
 
   buttonContainer: {

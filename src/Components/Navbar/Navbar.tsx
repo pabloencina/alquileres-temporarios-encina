@@ -10,16 +10,30 @@ import {
 import { NavbarStyles } from "./Navbar.Styles";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
-import ToggleOffOutlinedIcon from "@mui/icons-material/ToggleOffOutlined";
 import LanguageOutlinedIcon from "@mui/icons-material/LanguageOutlined";
+import LightModeIcon from "@mui/icons-material/LightMode";
+import DarkModeIcon from "@mui/icons-material/DarkMode";
 import daytimeModeLogo from "../Assets/daytime-mode-logo.svg";
+import nighttimeModeLogo from "../Assets/nighttime-mode-logo.svg";
 import { spacing } from "../../styles";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useTheme } from "../../contexts/ThemeContext";
 import { NavigationMenu } from "./NavigationMenu";
 
 export const Navbar = () => {
   const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
+  const { isDarkMode, toggleTheme } = useTheme();
+
+  // Obtener colores dinámicos según el tema
+  const getDynamicStyles = () => ({
+    backgroundColor: isDarkMode ? "#447D9B" : "#FAEDCA", // primaryNightTime / primaryDayTime
+    textColor: isDarkMode ? "#F6F6F6" : "#273F47", // buttons.secondary / text.secondary
+  });
+
+  const dynamicStyles = getDynamicStyles();
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [languageAnchorEl, setLanguageAnchorEl] = useState<null | HTMLElement>(
@@ -45,44 +59,54 @@ export const Navbar = () => {
   };
 
   const handleLogoClick = () => {
-    window.location.href = "/";
+    navigate("/");
   };
 
   return (
-    <Box sx={NavbarStyles.container}>
-      <Box>
+    <Box sx={{ ...NavbarStyles.container, backgroundColor: dynamicStyles.backgroundColor }}>
+      <Box sx={{ px: spacing.md, display: "flex", alignItems: "center" }}>
         <Button onClick={handleLogoClick}>
-          <img style={NavbarStyles.logo} src={daytimeModeLogo} alt="logo" />
+          <img 
+            style={NavbarStyles.logo} 
+            src={isDarkMode ? nighttimeModeLogo : daytimeModeLogo} 
+            alt="logo" 
+          />
         </Button>
         <Box sx={{ marginLeft: spacing.sm }}>
-          <Typography sx={NavbarStyles.title}>{t("navbar.title")}</Typography>
+          <Typography sx={{ ...NavbarStyles.title, color: dynamicStyles.textColor }}>{t("navbar.title")}</Typography>
         </Box>
       </Box>
-      <Box sx={NavbarStyles.containerButton}>
-        <Button
-          id="language-button"
-          aria-controls={languageMenuOpen ? "language-menu" : undefined}
-          aria-haspopup="true"
-          aria-expanded={languageMenuOpen ? "true" : undefined}
-          onClick={handleLanguageClick}
-          sx={NavbarStyles.button}
-        >
-          <LanguageOutlinedIcon sx={NavbarStyles.menuIcon} />
-        </Button>
-      </Box>
-      <Box sx={NavbarStyles.containerButton}>
-        <Button>
-          <ToggleOffOutlinedIcon sx={NavbarStyles.menuIcon} />
-        </Button>
-      </Box>
-      <Box sx={NavbarStyles.containerButton}>
-        <Button sx={NavbarStyles.button} onClick={handleMenuClick}>
-          {isMenuOpen ? (
-            <CloseOutlinedIcon sx={NavbarStyles.closeIcon} />
-          ) : (
-            <MenuIcon sx={NavbarStyles.menuIcon} />
-          )}
-        </Button>
+      <Box sx={{ px: spacing.md, display: "flex", alignItems: "center", gap: 1 }}>
+        <Box sx={NavbarStyles.containerButton}>
+          <Button
+            id="language-button"
+            aria-controls={languageMenuOpen ? "language-menu" : undefined}
+            aria-haspopup="true"
+            aria-expanded={languageMenuOpen ? "true" : undefined}
+            onClick={handleLanguageClick}
+            sx={{ ...NavbarStyles.button, color: dynamicStyles.textColor }}
+          >
+            <LanguageOutlinedIcon sx={{ ...NavbarStyles.menuIcon, color: dynamicStyles.textColor }} />
+          </Button>
+        </Box>
+        <Box sx={NavbarStyles.containerButton}>
+          <Button onClick={toggleTheme} sx={{ ...NavbarStyles.button, color: dynamicStyles.textColor }}>
+            {isDarkMode ? (
+              <LightModeIcon sx={{ ...NavbarStyles.menuIcon, color: dynamicStyles.textColor }} />
+            ) : (
+              <DarkModeIcon sx={{ ...NavbarStyles.menuIcon, color: dynamicStyles.textColor }} />
+            )}
+          </Button>
+        </Box>
+        <Box sx={NavbarStyles.containerButton}>
+          <Button sx={{ ...NavbarStyles.button, color: dynamicStyles.textColor }} onClick={handleMenuClick}>
+            {isMenuOpen ? (
+              <CloseOutlinedIcon sx={{ ...NavbarStyles.closeIcon, color: dynamicStyles.textColor }} />
+            ) : (
+              <MenuIcon sx={{ ...NavbarStyles.menuIcon, color: dynamicStyles.textColor }} />
+            )}
+          </Button>
+        </Box>
       </Box>
       <NavigationMenu isOpen={isMenuOpen} />
 

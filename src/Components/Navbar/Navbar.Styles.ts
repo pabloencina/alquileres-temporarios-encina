@@ -6,8 +6,10 @@ export const NavbarStyles = {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    backgroundColor: colors.primaryDayTime,
-    padding: spacing.xs,
+    // El backgroundColor se establecerá dinámicamente en el componente
+    padding: `${spacing.xs} 0`, // Solo padding vertical, sin márgenes horizontales
+    margin: 0, // Sin márgenes
+    width: "100%", // Ocupar todo el ancho
   },
   containerButton: {
     display: "flex",
@@ -22,7 +24,7 @@ export const NavbarStyles = {
     left: 0,
     right: 0,
     zIndex: 1000,
-    backgroundColor: colors.primaryDayTime,
+    // El backgroundColor se establecerá dinámicamente en el componente
     borderBottom: `1px solid ${colors.gray[200]}`,
     boxShadow: "0 2px 8px rgba(0, 0, 0, 0.1)",
     minHeight: "200px",

@@ -1,4 +1,4 @@
-import { colors, fonts, spacing, typography } from "../../styles/theme";
+import { fonts, spacing, typography } from "../../styles/theme";
 
 export const FooterStyles = {
   container: {
@@ -6,7 +6,7 @@ export const FooterStyles = {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: colors.primaryDayTime,
+    // El backgroundColor se establecerá dinámicamente en el componente
     height: "100px",
     gap: spacing.lg,
     marginTop: spacing.md,
@@ -16,7 +16,7 @@ export const FooterStyles = {
     fontFamily: fonts.secondary,
     fontSize: typography.fontSizes.xs,
     fontWeight: typography.fontWeights.medium,
-    color: colors.text.secondary,
+    // El color se establecerá dinámicamente en el componente
   },
 
   logo: {
